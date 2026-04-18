@@ -1,5 +1,6 @@
 import { GoogleOutlined } from "@ant-design/icons"
-import { Button, message } from "antd"
+import { message } from "antd"
+import { Button } from "./button"
 
 interface GoogleLoginButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: () => void
@@ -19,7 +20,7 @@ export function GoogleLoginButton({ onClick }: GoogleLoginButtonProps) {
       icon={<GoogleOutlined />}
       type="primary"
       ghost
-      size="large"
+      // size="large"
       className="w-full"
       onClick={handleClick}
     >

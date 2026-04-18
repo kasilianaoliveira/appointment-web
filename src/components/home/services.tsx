@@ -62,7 +62,7 @@ const servicePages = services.reduce<typeof services[]>((pages, service, index) 
 
 export const Services = () => {
   return (
-    <section className="mx-auto flex w-full max-w-360 flex-col items-center px-4 py-16">
+    <section id="servicos" className="mx-auto flex w-full max-w-360 scroll-mt-8 flex-col items-center px-4 py-16">
       <div className="flex flex-col items-center">
         <Title title="Serviços" />
         <Subtitle subtitle="Escolha o serviço ideal e agende em poucos minutos" />

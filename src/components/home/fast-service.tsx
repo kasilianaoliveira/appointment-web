@@ -8,7 +8,7 @@ export function FastService() {
   const navigate = useNavigate()
 
   return (
-    <section className="mx-auto flex w-full max-w-360 flex-col items-center gap-12 px-4 py-16 lg:flex-row lg:justify-between lg:gap-16 lg:py-24">
+    <section id="como-funciona" className="mx-auto flex w-full max-w-360 scroll-mt-8 flex-col items-center gap-12 px-4 py-16 lg:flex-row lg:justify-between lg:gap-16 lg:py-24">
       <div className="flex w-full max-w-2xl flex-col items-center gap-6 text-center lg:items-start lg:text-left">
         <Title title="Atendimento rápido e sem complicação" />
 

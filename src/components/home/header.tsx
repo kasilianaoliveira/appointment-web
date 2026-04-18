@@ -6,10 +6,10 @@ import { Button } from "../ui/button"
 import { ThemeToggle } from "../ui/theme-toggle"
 
 const menuItems = [
-  { href: "/", label: "Inicio" },
-  { href: "/services", label: "Serviços" },
-  { href: "/how-it-works", label: "Como funciona" },
-  { href: "/contact", label: "Contato" },
+  { href: "#inicio", label: "Inicio" },
+  { href: "#servicos", label: "Serviços" },
+  { href: "#como-funciona", label: "Como funciona" },
+  { href: "#contato", label: "Contato" },
 ]
 
 export default function Header() {

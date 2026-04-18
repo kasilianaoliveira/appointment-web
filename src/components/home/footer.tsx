@@ -5,10 +5,10 @@ import {
 } from "@ant-design/icons"
 
 const pageLinks = [
-  { href: "/", label: "Inicio" },
-  { href: "/services", label: "Serviços" },
-  { href: "/how-it-works", label: "Como funciona" },
-  { href: "/contact", label: "Contato" },
+  { href: "#inicio", label: "Inicio" },
+  { href: "#servicos", label: "Serviços" },
+  { href: "#como-funciona", label: "Como funciona" },
+  { href: "#contato", label: "Contato" },
 ]
 
 const contactItems = [
@@ -31,7 +31,7 @@ const contactItems = [
 
 export function Footer() {
   return (
-    <footer className="mt-8 border-t border-gray-500/60 bg-primary dark:bg-transparent text-primary">
+    <footer id="contato" className="mt-8 scroll-mt-8 border-t border-gray-500/60 bg-primary dark:bg-transparent text-primary">
       <div className="mx-auto grid w-full max-w-360 gap-12 px-4 py-12 md:grid-cols-2 md:gap-8 md:px-6 lg:px-8">
         <div className="space-y-5">
           <h3 className="text-lg font-semibold text-white">Páginas</h3>

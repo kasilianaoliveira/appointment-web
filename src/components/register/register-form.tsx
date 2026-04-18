@@ -1,8 +1,9 @@
 import { AuthHeader } from "@/components/ui/auth-header"
+import { Button } from "@/components/ui/button"
 import { GoogleLoginButton } from "@/components/ui/google-login-button"
 import { LockOutlined, UserOutlined } from "@ant-design/icons"
 import { useForm } from "@tanstack/react-form"
-import { Button, Checkbox, Divider, Form, Input } from "antd"
+import { Checkbox, Divider, Form, Input } from "antd"
 import * as z from "zod"
 
 const registerSchema = z.object({
@@ -44,7 +45,7 @@ export function RegisterForm() {
     validators: {
       onSubmit: registerSchema,
     },
-    onSubmit: async ({ value }) => {
+    onSubmit: async () => {
       console.log("criou")
       //   registerMutation.mutate(value, {
       //     onSuccess: () => {
@@ -61,7 +62,7 @@ export function RegisterForm() {
   return (
     <section className="w-150">
       <div className="flex justify-center mb-12">
-        <h2 className="text-3xl font-bold tracking-tight">KL FIX BYTE</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-primary">KL FIX BYTE</h2>
       </div>
 
       <AuthHeader
@@ -72,7 +73,8 @@ export function RegisterForm() {
       <div className="">
         <GoogleLoginButton />
 
-        <Divider style={{ borderColor: '#334E65' }}>Ou</Divider>
+        <Divider style={{ borderColor: '#99a1af' }}>Ou</Divider>
+
 
         <Form
           name="register"
@@ -97,6 +99,7 @@ export function RegisterForm() {
                     onBlur={field.handleBlur}
                     placeholder="Seu nome completo"
                     size="large"
+                    className=""
                   />
                 </Form.Item>
               )
@@ -186,11 +189,11 @@ export function RegisterForm() {
                     onChange={(e) => field.handleChange(e.target.checked)}
                   >
                     Aceito os{" "}
-                    <a href="/terms" className="text-blue-600 hover:underline">
+                    <a href="/terms">
                       termos de uso
                     </a>{" "}
                     e{" "}
-                    <a href="/privacy" className="text-blue-600 hover:underline">
+                    <a href="/privacy">
                       política de privacidade
                     </a>
                   </Checkbox>
@@ -215,7 +218,7 @@ export function RegisterForm() {
         </Form>
 
         <div className="text-center">
-          <span className="text-sm text-gray-600">
+          <span className="text-sm text-gray-400">
             Já tem uma conta?{" "}
             <a
               href="/login"

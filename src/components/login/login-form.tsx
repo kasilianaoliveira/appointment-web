@@ -1,9 +1,10 @@
 import { AuthHeader } from "@/components/ui/auth-header"
+import { Button } from "@/components/ui/button"
 import { GoogleLoginButton } from "@/components/ui/google-login-button"
-import { GoogleOutlined, LockOutlined, UserOutlined } from "@ant-design/icons"
+import { LockOutlined, UserOutlined } from "@ant-design/icons"
 import { useForm } from "@tanstack/react-form"
 import { useMutation } from "@tanstack/react-query"
-import { Button, Checkbox, Divider, Form, Input, message } from "antd"
+import { Checkbox, Divider, Form, Input, message } from "antd"
 import * as z from "zod"
 
 const loginSchema = z.object({
@@ -51,7 +52,7 @@ export function LoginForm() {
   return (
     <section className="w-150 bg-red">
       <div className="flex justify-center mb-12">
-        <h2 className="text-3xl font-bold tracking-tight">KL FIX BYTE</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-primary">KL FIX BYTE</h2>
       </div>
 
       <AuthHeader
@@ -62,7 +63,7 @@ export function LoginForm() {
       <div className="">
         <GoogleLoginButton />
 
-        <Divider style={{ borderColor: '#334E65' }}>Ou</Divider>
+        <Divider style={{ borderColor: '#99a1af' }}>Ou</Divider>
 
         <Form
           name="login"
@@ -81,6 +82,7 @@ export function LoginForm() {
                   help={isInvalid ? field.state.meta.errors?.[0]?.message : ""}
                 >
                   <Input
+                    aria-label="Email"
                     prefix={<UserOutlined />}
                     value={field.state.value}
                     onChange={(e) => field.handleChange(e.target.value)}
@@ -104,6 +106,7 @@ export function LoginForm() {
                   help={isInvalid ? field.state.meta.errors?.[0]?.message : ""}
                 >
                   <Input.Password
+                    aria-label="Senha"
                     prefix={<LockOutlined />}
                     value={field.state.value}
                     onChange={(e) => field.handleChange(e.target.value)}
@@ -142,7 +145,7 @@ export function LoginForm() {
                 type="primary"
                 htmlType="submit"
                 className="w-full"
-                size="large"
+                // size="large"
                 loading={loginMutation.status === "pending"}
               >
                 {loginMutation.status === "pending" ? "Entrando..." : "Entrar"}
@@ -152,7 +155,7 @@ export function LoginForm() {
         </Form>
 
         <div className="text-center">
-          <span className="text-sm text-gray-600">
+          <span className="text-sm text-gray-400">
             Ainda não tem uma conta?{" "}
             <a
               href="/register"

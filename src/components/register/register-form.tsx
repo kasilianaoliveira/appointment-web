@@ -12,8 +12,8 @@ const registerSchema = z.object({
     .string()
     .min(1, "Digite um e-mail válido.")
     .regex(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, "Digite um e-mail válido."),
-  password: z.string().min(6, "Senha deve ter ao menos 6 caracteres."),
-  confirmPassword: z.string().min(6, "Confirmação de senha deve ter ao menos 6 caracteres."),
+  password: z.string().min(8, "Senha deve ter ao menos 8 caracteres."),
+  confirmPassword: z.string().min(8, "Confirmação de senha deve ter ao menos 8 caracteres."),
   terms: z.boolean().refine(val => val === true, "Você deve aceitar os termos de uso."),
 }).refine((data) => data.password === data.confirmPassword, {
   message: "As senhas não coincidem",

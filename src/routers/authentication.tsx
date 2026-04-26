@@ -1,5 +1,6 @@
-import { Login } from '@/components/login/index';
-import { Register } from '@/components/register/index';
+
+import { Login } from "@/pages/login";
+import { Register } from "@/pages/register";
 import { createRoute } from "@tanstack/react-router";
 import { Route as rootRoute } from './__root';
 

@@ -12,7 +12,7 @@ const loginSchema = z.object({
     .string()
     .min(1, "Digite um e-mail válido.")
     .regex(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, "Digite um e-mail válido."),
-  password: z.string().min(6, "Senha deve ter ao menos 6 caracteres."),
+  password: z.string().min(8, "Senha deve ter ao menos 8 caracteres."),
   remember: z.boolean(),
 })
 

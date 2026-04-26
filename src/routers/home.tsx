@@ -1,4 +1,4 @@
-import Home from "@/components/home";
+import Home from "@/pages/home";
 import { createRoute } from "@tanstack/react-router";
 import { Route as rootRoute } from './__root';
 

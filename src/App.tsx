@@ -1,5 +1,5 @@
 // import { ThemeToggle } from "./components/ui/theme-toggle"
-import { Login } from "./components/login"
+import { Login } from "./pages/login"
 export function App() {
   return (
     <div className="page-background min-h-screen">
@@ -14,4 +14,3 @@ export function App() {
     </div>
   )
 }
-

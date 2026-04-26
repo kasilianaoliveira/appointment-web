@@ -4,6 +4,7 @@ import { GoogleLoginButton } from "@/components/ui/google-login-button"
 import { LockOutlined, UserOutlined } from "@ant-design/icons"
 import { useForm } from "@tanstack/react-form"
 import { Checkbox, Divider, Form, Input } from "antd"
+import { Link } from "@tanstack/react-router"
 import * as z from "zod"
 
 const registerSchema = z.object({
@@ -220,12 +221,9 @@ export function RegisterForm() {
         <div className="text-center">
           <span className="text-sm text-gray-400">
             Já tem uma conta?{" "}
-            <a
-              href="/login"
-              className="font-semibold hover:underline"
-            >
+            <Link to="/login" className="font-semibold hover:underline">
               Faça login
-            </a>
+            </Link>
           </span>
         </div>
       </div>

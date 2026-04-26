@@ -19,6 +19,7 @@
     "@tanstack/react-router": "^1.168.21",
     "@tanstack/react-router-devtools": "^1.166.13",
     "antd": "^6.3.5",
+    "axios": "^1.15.2",
     "date-fns": "^4.1.0",
     "react": "^19.2.4",
     "react-day-picker": "^9.14.0",

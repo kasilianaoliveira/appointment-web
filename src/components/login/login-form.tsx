@@ -5,6 +5,7 @@ import { LockOutlined, UserOutlined } from "@ant-design/icons"
 import { useForm } from "@tanstack/react-form"
 import { useMutation } from "@tanstack/react-query"
 import { Checkbox, Divider, Form, Input, message } from "antd"
+import { Link } from "@tanstack/react-router"
 import * as z from "zod"
 
 const loginSchema = z.object({
@@ -157,12 +158,9 @@ export function LoginForm() {
         <div className="text-center">
           <span className="text-sm text-gray-400">
             Ainda não tem uma conta?{" "}
-            <a
-              href="/register"
-              className="font-semibold hover:underline"
-            >
+            <Link to="/register" className="font-semibold hover:underline">
               Cadastre-se
-            </a>
+            </Link>
           </span>
         </div>
       </div>
